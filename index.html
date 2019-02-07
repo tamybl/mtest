@@ -15,6 +15,18 @@
 <body>
 
     <div class="wrapper">
+        <nav class="navigation">
+            <ul class="nav-items mobile">
+                <li><a href="#"><i class="fas fa-bars"></i></a></li>
+
+            </ul>
+            <ul class="nav-items">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
         <header class="slider gallery">
             <div class="photos">
                 <div class="block block-1 active"><img src="https://jssorcdn7.azureedge.net/demos/img/gallery/980x380/001.jpg"
@@ -26,10 +38,11 @@
             </div>
             <div class="buttons">
                 <a class="prev" href="#">
-                    <span>&lt;</span>
+                    <span><i class="fas fa-arrow-left"></i></span>
                 </a>
                 <a class="next" href="#">
-                    <span>&gt;</span>
+                    <span><i class="fas fa-arrow-right"></i>
+                        </span>
                 </a>
             </div>
         </header>
@@ -39,21 +52,14 @@
             <section class="posts--section" id="allposts">
 
             </section>
-
-            <div class="pagination">
-                <input type="button" id="first" onclick="firstPage()" value="first" />
-                <input type="button" id="next" onclick="nextPage()" value="next" />
-                <input type="button" id="previous" onclick="previousPage()" value="previous" />
-                <input type="button" id="last" onclick="lastPage()" value="last" />
-            </div>
         </main>
 
 
         <!-- Sidebar -->
-        <aside class="sidebar--section">
+        <aside class="sidebar-section">
             <ul class="sidebar--widgets">
                 <li class="widget green">
-                    <h2>Lorem</h2>
+                    <h2 class="widget_title">Lorem</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et arcu leo. In viverra
                         rutrum
                         nisl, vitae tincidunt nibh accumsan et. Integer ac rutrum odio. Etiam viverra bibendum
@@ -72,7 +78,7 @@
                 </li>
 
                 <li class="widget light">
-                    <h2>Lorem Ipsum</h2>
+                    <h2 class="widget_title">Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et arcu leo. In viverra
                         rutrum
                         nisl, vitae tincidunt nibh accumsan et. Integer ac rutrum odio. Etiam viverra bibendum
@@ -105,8 +111,8 @@
                 </li>
 
                 <li class="widget light">
-                    <h2 class="widgettitle">Subscribe and follow</h2>
-                    <div class="textwidget">
+                    <h2 class="widget_title">Subscribe and follow</h2>
+                    <div class="text_widget">
                         <div class="widget-social-follow">
                             <a target="_blank" href="#">
                                 <i class="fab fa-facebook"></i>
@@ -132,7 +138,6 @@
     </div>
     <script src="js/data.js"></script>
     <script src="js/slider.js"></script>
-    <script src="js/pagination.js"></script>
 
 </body>
 
