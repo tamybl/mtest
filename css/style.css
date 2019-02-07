@@ -1,6 +1,6 @@
 :root {
     --main-bg-color: #f7f7f7;
-    --main-txt-color: #333;
+    --main-txt-color: #222;
     --section-bg-color: #9BA78A;
     --font-primary: 'Quicksand', sans-serif;
     --font-secundary: 'Montserrat', sans-serif;
@@ -21,12 +21,12 @@ body {
 .wrapper {
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: grid;
     grid-template-columns: minmax(250px, 0.4fr) 1fr;
     grid-template-rows: 300px auto;
     grid-gap: 20px;
-    padding: 0 10px;
+
 }
 
 main.content {
@@ -50,6 +50,7 @@ aside.sidebar--section {
     padding: 4px 10px;
     border-left: 4px solid var(--section-bg-color);
     font-size: calc(16px + 0.5vw);
+    color: #000;
 }
 
 .post--item p {
@@ -65,7 +66,7 @@ aside.sidebar--section {
 }
 
 .widget {
-    margin: 10px auto;
+    margin: 0 auto 15px;
     padding: 10px 15px;
     list-style-type: none;
 
@@ -85,15 +86,109 @@ aside.sidebar--section {
 .widget.green {
     background: var(--section-bg-color);
     color: #fff;
+    border: 1px solid #88927b;
 }
 
 .widget.light{
     border: 1px solid #d9d9d9;
 }
 
+.widget .list-url {
+    padding: 0;
+}
+
+.widget .list-url li {
+    list-style-type: square;
+    margin: 5px 20px;
+}
+
+.widget .list-url li a {
+    text-decoration: none;
+    color: #88927b;
+    transition: color 0.5s ease; 
+}
+
+.widget .list-url li a:hover {
+    color: red;
+}
+
 .button {
     padding: 20px;
     border-radius: 6px;
+}
+
+.gallery {
+    width: 100%;
+    max-width: 1248px;
+    text-align: center;
+    position: relative;
+}
+
+.gallery .buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    top: 50%;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.gallery a {
+    text-decoration: none;
+    font-size: 22px;
+    /* display: block; */
+    width: 30px;
+    height: 30px;
+    color: var(--gallery-btn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #666;
+    border-radius: 21px;
+    position: absolute;
+}
+
+.gallery a.prev {
+    left: 1%;
+}
+
+.gallery a.next {
+    right: 1%;
+}
+
+.gallery a:hover {
+    color: #dfdfdf;
+}
+
+.gallery .photos {
+    position: relative;
+    height: 300px;
+}
+
+.gallery .block {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.gallery .block.active {
+    opacity: 1;
+}
+
+.block-1 {
+    background: lightcoral;
+}
+
+.block-2 {
+    background: teal;
+}
+
+.block-3 {
+    background: orchid;
 }
 
 

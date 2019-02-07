@@ -7,14 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MODYO - Test Frontend</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <div class="wrapper">
-        <header class="slider">
-
+        <header class="slider gallery">
+            <div class="photos">
+                <div class="block block-1 active">1</div>
+                <div class="block block-2">2 </div>
+                <div class="block block-3">3</div>
+            </div>
+            <div class="buttons">
+                <a class="prev" href="#">
+                    <span>&lt;</span>
+                </a>
+                <a class="next" href="#">
+                    <span>&gt;</span>
+                </a>
+            </div>
         </header>
 
         <main class="content">
@@ -22,6 +36,13 @@
             <section class="posts--section" id="allposts">
 
             </section>
+
+            <div class="pagination">
+                <input type="button" id="first" onclick="firstPage()" value="first" />
+                <input type="button" id="next" onclick="nextPage()" value="next" />
+                <input type="button" id="previous" onclick="previousPage()" value="previous" />
+                <input type="button" id="last" onclick="lastPage()" value="last" />
+            </div>
         </main>
 
 
@@ -30,19 +51,73 @@
             <ul class="sidebar--widgets">
                 <li class="widget green">
                     <h2>Lorem</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et arcu leo. In viverra rutrum nisl, vitae tincidunt nibh accumsan et. Integer ac rutrum odio. Etiam viverra bibendum molestie. Suspendisse nec lectus in urna ornare faucibus. Quisque ipsum dolor, ullamcorper non ante non, congue mollis libero. Pellentesque condimentum velit at sem suscipit, vel tempus elit scelerisque. Nunc in egestas augue, a tincidunt tellus. Sed in ullamcorper nibh. In et purus in mauris congue convallis. Donec consequat dignissim condimentum. Integer enim libero, porttitor eu nibh id, pulvinar hendrerit odio. Vivamus auctor ut dolor quis porttitor. Curabitur erat nisi, accumsan nec sollicitudin vitae, bibendum eget quam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et arcu leo. In viverra rutrum
+                        nisl, vitae tincidunt nibh accumsan et. Integer ac rutrum odio. Etiam viverra bibendum molestie.
+                        Suspendisse nec lectus in urna ornare faucibus. Quisque ipsum dolor, ullamcorper non ante non, congue
+                        mollis libero. Pellentesque condimentum velit at sem suscipit, vel tempus elit scelerisque. Nunc
+                        in egestas augue, a tincidunt tellus. Sed in ullamcorper nibh. In et purus in mauris congue convallis.
+                        Donec consequat dignissim condimentum. Integer enim libero, porttitor eu nibh id, pulvinar hendrerit
+                        odio. Vivamus auctor ut dolor quis porttitor. Curabitur erat nisi, accumsan nec sollicitudin vitae,
+                        bibendum eget quam.</p>
                 </li>
 
                 <li class="widget light">
                     <h2>Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et arcu leo. In viverra rutrum nisl, vitae tincidunt nibh accumsan et. Integer ac rutrum odio. Etiam viverra bibendum molestie. Suspendisse nec lectus in urna ornare faucibus. Quisque ipsum dolor, ullamcorper non ante non, congue mollis libero. Pellentesque condimentum velit at sem suscipit, vel tempus elit scelerisque. Nunc in egestas augue, a tincidunt tellus. Sed in ullamcorper nibh. In et purus in mauris congue convallis. Donec consequat dignissim condimentum. Integer enim libero, porttitor eu nibh id, pulvinar hendrerit odio. Vivamus auctor ut dolor quis porttitor. Curabitur erat nisi, accumsan nec sollicitudin vitae, bibendum eget quam.</p>
-                    </li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et arcu leo. In viverra rutrum
+                        nisl, vitae tincidunt nibh accumsan et. Integer ac rutrum odio. Etiam viverra bibendum molestie.
+                        Suspendisse nec lectus in urna ornare faucibus. Quisque ipsum dolor, ullamcorper non ante non, congue
+                        mollis libero. Pellentesque condimentum velit at sem suscipit, vel tempus elit scelerisque. Nunc
+                        in egestas augue, a tincidunt tellus. Sed in ullamcorper nibh. In et purus in mauris congue convallis.
+                        Donec consequat dignissim condimentum. Integer enim libero, porttitor eu nibh id, pulvinar hendrerit
+                        odio. Vivamus auctor ut dolor quis porttitor. Curabitur erat nisi, accumsan nec sollicitudin vitae,
+                        bibendum eget quam.</p>
+                </li>
+
+                <li class="widget light">
+                    <h2>Lorem Ipsum</h2>
+                    <p>
+                        <ul class="list-url">
+                            <li>
+                                <a href="#">Lorem</a>
+                            </li>
+                            <li>
+                                <a href="#">Lorem</a>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+
+                <li class="widget light">
+                    <h2 class="widgettitle">Subscribe and follow</h2>
+                    <div class="textwidget">
+                        <div class="widget-social-follow">
+                            <a target="_blank" href="#">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a target="_blank" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a target="_blank" href="#">
+                                <i class="fab fa-google-plus"></i>
+                            </a>
+                            <a target="_blank" href="#">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a target="_blank" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
 
             </ul>
         </aside>
     </div>
-
+    <!-- <script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
     <script src="js/data.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/pagination.js"></script>
+
 </body>
 
 </html>
