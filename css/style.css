@@ -173,6 +173,12 @@ aside.sidebar--section {
     left: 0;
     opacity: 0;
     transition: opacity 1s;
+    overflow: hidden;
+}
+
+.gallery .block .img {
+    width: 100%;
+    max-height: 300px;
 }
 
 .gallery .block.active {
@@ -180,15 +186,28 @@ aside.sidebar--section {
 }
 
 .block-1 {
-    background: lightcoral;
+    background: #757d6b;
 }
 
 .block-2 {
-    background: teal;
+    background: #757d6b;
 }
 
 .block-3 {
-    background: orchid;
+    background: #757d6b;
+}
+
+/* Fin Slider */
+
+@media all and (max-width: 768px) {
+    .wrapper {
+        width: calc(100% - 20px);
+        grid-template-columns:1fr;
+    }
+
+    aside.sidebar--section {
+        grid-row: initial;
+    }
 }
 
 
