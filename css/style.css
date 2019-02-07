@@ -1,0 +1,33 @@
+:root {
+    --main-bg-color: #000;
+    --main-txt-color: #333;
+    --font-primary: 'Quicksand', sans-serif;
+    --font-secundary: 'Montserrat', sans-serif;
+}
+
+*, html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--main-txt-color);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(250px, 0.5fr) 1fr;
+    grid-template-rows: 300px auto;
+}
+
+
+
+
+
+
+
